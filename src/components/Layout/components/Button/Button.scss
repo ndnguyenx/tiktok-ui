@@ -1,0 +1,76 @@
+.btn-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 22px;
+    background-color: var(--white);
+    min-width: 100px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    user-select: none;
+    cursor: pointer;
+    + .btn-wrapper {
+        margin-left: 8px;
+    }
+    &.disabled {
+        opacity: 0.5;
+    }
+}
+.text {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.icon + .title,
+.title + .icon {
+    margin-left: 8px;
+}
+//Button Type
+
+.rounded {
+    border-radius: 999px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;
+    border: 1px solid rgba(22, 24, 35, 0.03);
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+.primary {
+    color: var(--white) !important;
+    background-color: var(--primary);
+    border-color: var(--primary);
+    &:hover {
+        background: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.06),
+                rgba(0, 0, 0, 0.06)
+            ),
+            rgb(254, 44, 85);
+        border-color: var(--primary);
+    }
+}
+
+.outline {
+    border-color: currentColor;
+    color: var(--primary);
+    &:hover {
+        background-color: rgba(254, 44, 85, 0.06);
+        border-color: currentColor;
+    }
+}
+
+//Button Size
+.small {
+    padding: 4px 22px;
+    min-width: 88px;
+}
+
+.large {
+    min-width: 148px;
+    padding: 14px 16px;
+}
